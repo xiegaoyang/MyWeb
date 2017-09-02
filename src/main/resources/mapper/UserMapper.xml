@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xgy.myweb.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.xgy.myweb.model.User">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <id column="USERNAME" jdbcType="VARCHAR" property="username" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="SEX" jdbcType="VARCHAR" property="sex" />
+    <result column="AGE" jdbcType="INTEGER" property="age" />
+    <result column="NUMBER" jdbcType="VARCHAR" property="number" />
+    <result column="WORK" jdbcType="VARCHAR" property="work" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="TIME" jdbcType="TIMESTAMP" property="time" />
+  </resultMap>
+
+
+
+</mapper>
