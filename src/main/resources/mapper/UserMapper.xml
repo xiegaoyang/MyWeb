@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xgy.myweb.dao.IUserDao">
+    <cache/>
+    <insert id="insertUser" parameterType="com.xgy.myweb.model.User">
+      insert into user(username, password, sex, age, number, work, address)
+      VALUE (#{username}, #{password}, #{sex}, #{age}, #{number}, #{work}, #{address});
+    </insert>
+
+</mapper>

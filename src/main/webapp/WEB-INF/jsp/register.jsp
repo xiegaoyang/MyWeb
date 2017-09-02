@@ -36,6 +36,10 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄:</td>
+                    <td><input type="text" name="age"></td>
+                </tr>
+                <tr>
                     <td>工&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作:</td>
                     <td><input type="text" name="work"></td>
                 </tr>
