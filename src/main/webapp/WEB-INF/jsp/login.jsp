@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>馨香园</title>
 </head>
 <body>
     <form align="center" style="margin-top: 50px" method="post" action="/user/login">
