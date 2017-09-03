@@ -1,6 +1,6 @@
 package com.xgy.myweb.service.impl;
 
-import com.xgy.myweb.dao.IUserDao;
+import com.xgy.myweb.dao.UserMapper;
 import com.xgy.myweb.model.User;
 import com.xgy.myweb.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,13 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements IUserService {
 
     @Autowired
-    private IUserDao userDao;
+    private UserMapper userMapper;
 
     public boolean createUser(User user) {
 
-        userDao.insertUser(user);
+        if (1 != userMapper.insert(user)) {
+            return false;
+        }
 
         return true;
     }
@@ -27,11 +29,10 @@ public class UserServiceImpl implements IUserService {
     }
 
     public boolean deleteUser(String username) {
-        return true;
+        return false;
     }
 
     public boolean updateUser(User user) {
-
-        return true;
+        return false;
     }
 }
