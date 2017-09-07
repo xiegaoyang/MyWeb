@@ -18,11 +18,14 @@
     <!-- 开启mvc注解 -->
     <mvc:annotation-driven />
 
+    <!--静态资源处理-->
+    <mvc:default-servlet-handler />
+
     <!-- 视图解析器  定义跳转的文件的前后缀 ，视图模式配置-->
     <!--用于支持Servlet、JSP视图解析-->
     <bean  id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="prefix" value="/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
