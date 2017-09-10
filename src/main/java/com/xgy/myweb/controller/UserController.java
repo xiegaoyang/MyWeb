@@ -33,7 +33,14 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(User user) {
+    public String login(String username, String password) {
+
+        System.out.println("login");
+
+        if (!userService.login(username, password)) {
+            return ResponseCode.CODE_202.getDesc();
+        }
+
 
         //若登陆成功，跳转到导航页
         return "redirect:/navigation";

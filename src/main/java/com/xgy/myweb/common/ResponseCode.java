@@ -8,8 +8,10 @@ package com.xgy.myweb.common;
 
 public enum ResponseCode {
     CODE_100(100, "请求成功"),
-    CODE_200(200, "请求错误"),
+    CODE_200(200, "请求失败"),
     CODE_201(201, "缺少必要参数"),
+    CODE_202(202, "登陆失败"),
+
     CODE_300(300, "用户注册失败");
 //    CODE_300(300, "服务器繁忙"),
 //    CODE_301(301, "请求失败，请重新操作"),

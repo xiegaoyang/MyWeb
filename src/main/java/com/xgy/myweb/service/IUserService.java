@@ -11,5 +11,7 @@ public interface IUserService {
     User getUser(String username);
     boolean deleteUser(String username);
     boolean updateUser(User user);
+    boolean login(String username, String password);
+    boolean logout(String username, String password);
 
 }

@@ -3,19 +3,27 @@ package com.xgy.myweb.service.impl;
 import com.xgy.myweb.dao.UserMapper;
 import com.xgy.myweb.model.User;
 import com.xgy.myweb.service.IUserService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 
 /**
  * Created by hadoop on 2017/8/31.
  */
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserService implements IUserService {
+
+    private final Log logger = LogFactory.getLog(this.getClass());
 
     @Autowired
     private UserMapper userMapper;
 
     public boolean createUser(User user) {
+
+        user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
+
 
         if (1 != userMapper.insert(user)) {
             return false;
@@ -35,4 +43,15 @@ public class UserServiceImpl implements IUserService {
     public boolean updateUser(User user) {
         return false;
     }
+
+    public boolean login(String username, String password) {
+
+
+        return true;
+    }
+
+    public boolean logout(String username, String password) {
+        return true;
+    }
+
 }
