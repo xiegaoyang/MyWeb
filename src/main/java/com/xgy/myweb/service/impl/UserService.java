@@ -51,14 +51,14 @@ public class UserService implements IUserService {
 
     public boolean login(String username, String password) {
 
-        System.out.println(username);
-        Long result = redisTemplate.opsForList().leftPush("login", username);
-        System.out.println("result : " + result);
+        redisTemplate.opsForList().leftPush("login", username);
 
         return true;
     }
 
     public boolean logout(String username, String password) {
+
+
         return true;
     }
 

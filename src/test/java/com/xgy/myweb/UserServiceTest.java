@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 @RunWith(value = SpringJUnit4ClassRunner.class)
 //@ContextConfiguration(locations = {"/system-dao.xml"})
 //@ContextConfiguration(locations = "classpath:spring-redis.xml")
-@ContextConfiguration(locations = { "classpath:spring-redis.xml", "classpath:spring-mybatis.xml"})
+@ContextConfiguration(locations = { "classpath:applicationContext.xml", "classpath:spring-redis.xml", "classpath:spring-mybatis.xml"})
 public class UserServiceTest {
 
     @Autowired
