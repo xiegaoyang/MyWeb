@@ -6,6 +6,7 @@ import com.xgy.myweb.service.IUserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
@@ -18,12 +19,14 @@ public class UserService implements IUserService {
     private final Log logger = LogFactory.getLog(this.getClass());
 
     @Autowired
+    private RedisTemplate<String, String> redisTemplate;
+
+    @Autowired
     private UserMapper userMapper;
 
     public boolean createUser(User user) {
 
         user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
-
 
         if (1 != userMapper.insert(user)) {
             return false;
@@ -33,7 +36,9 @@ public class UserService implements IUserService {
     }
 
     public User getUser(String username) {
-        return null;
+        User user = new User();
+        user.setUsername(username);
+        return userMapper.selectOne(user);
     }
 
     public boolean deleteUser(String username) {
@@ -46,6 +51,9 @@ public class UserService implements IUserService {
 
     public boolean login(String username, String password) {
 
+        System.out.println(username);
+        Long result = redisTemplate.opsForList().leftPush("login", username);
+        System.out.println("result : " + result);
 
         return true;
     }
