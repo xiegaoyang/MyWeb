@@ -50,7 +50,6 @@
         }
 
         function validate(){
-
             var flag=addCheck();
             if(flag==false)
                 return false;
@@ -74,7 +73,7 @@
     <table style="margin-top: 50px; margin-left: 550px">
         <tr>
             <td>用&nbsp;户&nbsp;名:</td>
-            <td><input type="text" name="username"></td>
+            <td><input type="text" name="username" required></td>
         </tr>
         <tr>
             <td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:</td>
@@ -97,11 +96,11 @@
         </tr>
         <tr>
             <td>电话号码:</td>
-            <td><input type="text" name="number"></td>
+            <td><input type="text" name="number" required></td>
         </tr>
         <tr>
             <td>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
-            <td><input type="password" name="password"></td>
+            <td><input type="password" name="password" required></td>
         </tr>
         <tr>
             <td>确认密码:</td>
@@ -113,6 +112,8 @@
     <br><br>
     <input type="submit" name="注册" style="width:100px;height:50px">
 </form>
+
+
 
 </body>
 </html>

@@ -35,7 +35,6 @@ public class UserServiceTest {
         System.out.println("after");
     }
 
-
     @Test
     public void getUser() throws Exception {
 
@@ -52,6 +51,7 @@ public class UserServiceTest {
         userService.login(username, password);
     }
 
-
-
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
 }

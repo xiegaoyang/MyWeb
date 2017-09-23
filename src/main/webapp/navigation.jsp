@@ -38,6 +38,19 @@
     </div>
 </div>
 
+<div>s
+    <form action="updateHeadUrl.do" method="post" enctype="multipart/form-data">
+        <div class="edit-title">
+            <span class="text-danger">${error3}</span>
+            <input type="file" name="myFileName">
+        </div>
+        <div class="relative">
+            <button class="edit-submit">确认更新</button>
+        </div>
+    </form>
+</div>
+
+
 
 
 </body>
