@@ -38,8 +38,8 @@
     </div>
 </div>
 
-<div>s
-    <form action="updateHeadUrl.do" method="post" enctype="multipart/form-data">
+<div>
+    <form action="updateHeadUrl" method="post" enctype="multipart/form-data">
         <div class="edit-title">
             <span class="text-danger">${error3}</span>
             <input type="file" name="myFileName">
