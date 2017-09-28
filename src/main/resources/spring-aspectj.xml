@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.1.xsd
+">
+
+    <!--&lt;!&ndash; 扫描注解，排除controller注解避免和mvc容器重复加载&ndash;&gt;-->
+    <!--<context:component-scan base-package="com.xgy.myweb.dao">-->
+        <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+    <!--</context:component-scan>-->
+
+    <!--&lt;!&ndash; 启动@aspectj的自动代理支持&ndash;&gt;-->
+    <!--<aop:aspectj-autoproxy />-->
+
+    <!-- 定义目标对象 -->
+    <!--<bean id="userDaos" class="com.xgy.myweb.dao.impl.UserDaoImpl" />-->
+    <!-- 定义aspect类 -->
+    <!--<bean name="myAspectj" class="com.xgy.myweb.dao.MyAspectj"/>-->
+
+</beans>

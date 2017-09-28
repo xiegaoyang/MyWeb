@@ -20,8 +20,6 @@
         <typeAlias alias="User" type="com.xgy.myweb.model.User"/>
     </typeAliases>
 
-
-
     <mappers>
         <!--<mapper resource="mapper/*.Mapper.xml"/>-->
     </mappers>

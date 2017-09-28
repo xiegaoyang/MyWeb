@@ -50,9 +50,7 @@ public class UserService implements IUserService {
     }
 
     public boolean login(String username, String password) {
-
         redisTemplate.opsForList().leftPush("login", username);
-
         return true;
     }
 

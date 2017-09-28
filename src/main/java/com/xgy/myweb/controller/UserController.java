@@ -1,6 +1,7 @@
 package com.xgy.myweb.controller;
 
 import com.xgy.myweb.common.ResponseCode;
+import com.xgy.myweb.exception.ApplicationException;
 import com.xgy.myweb.model.User;
 import com.xgy.myweb.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
 
-    public String register(User user) {
+    public String register(User user) throws ApplicationException{
         System.out.println("register");
         System.out.println(user.toString());
 
@@ -33,7 +34,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(String username, String password) {
+    public String login(String username, String password) throws ApplicationException{
 
         System.out.println("login");
 
